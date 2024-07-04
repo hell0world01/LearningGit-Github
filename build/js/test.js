@@ -53,10 +53,75 @@ topics.forEach(function(text){
     ulElement.appendChild(liElement)
 })
 
-let companies = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
-console.log(companies.shift());
-console.log(companies);
-console.log(companies.splice(1,1,"Ola"));
-console.log(companies);
-console.log(companies.push("Amazon"))
-console.log(companies)
+let countVowels1 = (vowels) => {
+    let count = 0;
+    for(let vowel of vowels){
+        if(vowel == "a" || vowel == "e" ||  vowel == "i" || vowel == "o" || vowel == "u"){
+            count++;
+        }
+    }
+    console.log(`${count} vowels character in the given words.`);
+}
+
+let myArray = [90,80,83,75,92,91,95];
+/*
+myArray.forEach(val => {
+    let result = val * val;
+    console.log(result);
+})
+*/
+/*
+const output = myArray.filter( val => {
+    return val > 90;
+})
+console.log(output)
+*/
+/*
+let inputNumber = prompt("Enter any number");
+console.log(typeof inputNumber);
+
+let arr = [];
+for(let i = 1; i <= inputNumber; i++){
+    arr[i-1] = i;
+    console.log(arr)
+}
+console.log(typeof arr)
+
+const sum = arr.reduce( (prevs , curr) => {
+    return prevs + curr;
+})
+console.log(sum)
+*/
+
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    address: {
+        street: '123 Main St',
+        city: 'Anytown',
+        zip: '12345'
+    },
+    greet: function() {
+        console.log('Hello!');
+    }
+};
+
+// Using console.log()
+console.log(person);
+
+// Using console.dir()
+console.dir(person);
+let heading = document.querySelector("#heading");
+
+const textArr = [
+    "Div1",
+    "Div2",
+    "Div3",
+]
+
+let box = document.querySelectorAll('.box');
+
+textArr.forEach( (val, i)=> {
+        box[i].innerHTML = `<i>${val}</i>`;
+})
